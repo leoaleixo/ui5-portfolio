@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+    <meta http-equiv="Content-Type"
+        content="text/html;charset=UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+        
+    <title>Fiori Launchpad</title>
+
+    <script>
+        window["sap-ushell-config"] = {
+            defaultRenderer: "fiori2",
+            renderers: {
+                fiori2: {
+                    componentData: {
+                        config: {
+                            search: "hidden"
+                        }
+                    }
+                }
+            },
+            applications: {
+                "MYAPP_INTENT-ACTION": {
+                    title: "GitHub",
+                    subTitle: "Profile",
+                    applicationType: "URL",
+                    url: "https://github.com/leoaleixo/ui5-portfolio.git"
+                }
+            }
+        };
+
+    </script>
+
+    <script src="https://ui5.sap.com/test-resources/sap/ushell/bootstrap/sandbox.js"
+        id="sap-ushell-bootstrap">
+    </script>
+
+    <script id="sap-ui-bootstrap"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.ushell"
+        data-sap-ui-theme="sap_fiori_3"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-preload="async"
+        data-sap-ui-frameOptions="allow">
+
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function() {
+           var oRenderer = sap.ushell.Container.createRenderer();
+            oRenderer.placeAt("content");
+        });
+
+    </script>
+
+</head>
+
+<body class="sapUiBody"
+    id="content">
+</body>
+
+</html>
